@@ -1,0 +1,112 @@
+@font-face {
+	font-family: Caveat;
+	src: url(../fonts/Caveat/Caveat-Regular.ttf);
+}
+@font-face {
+	font-family: Chewy;
+	src: url(../fonts/Chewy/Chewy-Regular.ttf);
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	background-image: url('../images/cartoon.jpg');
+	background-attachment: fixed;
+	background-size: 100vw 100vh;
+}
+
+#header {
+	margin-left: calc(14vw + 3px);
+	background: #ffffff;
+	position: fixed;
+	height: 10vw;
+	width: 72vw;
+	z-index: 1;			
+}
+
+h1 {
+	text-align: center;
+	font-family: Chewy;
+	padding-top: 1.8vw;
+	font-size: 5vw;
+	color: #ff0000;
+}
+
+#fixed-back {
+	border-right: 3px solid #000;
+	border-left: 3px solid #000;
+	margin-left: 14vw;
+	background: #fff;
+	position: fixed;
+	height: 100vh;
+	width: 72vw;
+}
+
+#contents {
+	margin-left: calc(14.3vw + 3px);
+	position: relative;
+	padding-top: 12vw;
+	width: 71.4vw;
+	
+	/*background:#ddd;
+	opacity:0.3;*/
+}
+
+.row {
+	justify-content: space-around;
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 3vh;
+	padding-right: 1vw;
+	padding-left: 1vw;
+	display: flex;
+	width: 100%;
+	left: -3px;			
+}
+
+.orange, .green, .blue, .purple, .yellow {
+	border-radius: 10px;
+	height: 15vw;
+	width: 20vw;
+}
+.orange {
+	border: 3px solid #f49d57;
+}
+.green {
+	border: 3px solid #c5ef41;
+}
+.blue {
+	border: 3px solid #acc7ee;
+}
+.purple {
+	border: 3px solid #ab8cf3;
+}
+.yellow {
+	border: 3px solid #f2eb0d;
+}
+
+.o-top, .g-top, .b-top, .p-top, .y-top {
+	padding-bottom: 0.8vw;
+	font-family: Caveat;
+	text-align: center;
+	font-size: 3vw;
+	color: #ffffff;
+	height: 20%;
+}
+.o-top {
+	background: #f49d57;
+}
+.g-top {
+	background: #c5ef41;
+}
+.b-top {
+	background: #acc7ee;
+}
+.p-top {
+	background: #ab8cf3;
+}
+.y-top {
+	background: #f2eb0d;
+}
