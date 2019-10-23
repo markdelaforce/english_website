@@ -23,7 +23,7 @@ body {
 	position: fixed;
 	height: 10vw;
 	width: 72vw;
-	z-index: 1;			
+	z-index: 1;
 }
 
 h1 {
@@ -63,11 +63,12 @@ h1 {
 	padding-left: 1vw;
 	display: flex;
 	width: 100%;
-	left: -3px;			
+	left: -3px;
 }
 
 .orange, .green, .blue, .purple, .yellow {
 	border-radius: 10px;
+	background: #ffffff;
 	height: 15vw;
 	width: 20vw;
 }
@@ -86,11 +87,15 @@ h1 {
 .yellow {
 	border: 3px solid #f2eb0d;
 }
+.orange:hover, .green:hover, .blue:hover, .purple:hover, .yellow:hover {
+	cursor: pointer;
+}
 
 .o-top, .g-top, .b-top, .p-top, .y-top {
 	padding-bottom: 0.8vw;
 	font-family: Caveat;
 	text-align: center;
+	line-height: 100%;
 	font-size: 3vw;
 	color: #ffffff;
 	height: 20%;
