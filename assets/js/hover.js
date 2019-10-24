@@ -24,7 +24,24 @@ function addEventListeners(boxes, colorClass, inColor, outColor, topClass) {
 
 function styleBox(box, color, top_class, size) {
 	let top = box.getElementsByClassName(top_class)[0];
+	let image = box.getElementsByClassName('image')[0];
 	box.style.borderColor = color;
 	top.style.background = color;
 	top.style.fontSize = size;
+	if (size === '3.1vw') {
+		top.style.lineHeight = '110%'
+		image.style.opacity = '1';
+		image.style.height = '102%';
+		image.style.width = '102%';
+		image.style.left = '-1%'
+		image.style.top = '-1%'
+	}
+	else {
+		top.style.lineHeight = '120%'
+		image.style.opacity = '0.85';
+		image.style.height = '100%';
+		image.style.width = '100%';
+		image.style.left = '0'
+		image.style.top = '0'
+	}
 }

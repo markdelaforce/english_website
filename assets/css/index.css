@@ -11,6 +11,10 @@
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
 body {
 	background-image: url('../images/cartoon.jpg');
 	background-attachment: fixed;
@@ -23,7 +27,7 @@ body {
 	position: fixed;
 	height: 10vw;
 	width: 72vw;
-	z-index: 1;
+	z-index: 3;
 }
 
 h1 {
@@ -57,7 +61,6 @@ h1 {
 .row {
 	justify-content: space-around;
 	box-sizing: border-box;
-	position: relative;
 	margin-bottom: 3vh;
 	padding-right: 1vw;
 	padding-left: 1vw;
@@ -69,8 +72,11 @@ h1 {
 .orange, .green, .blue, .purple, .yellow {
 	border-radius: 10px;
 	background: #ffffff;
+	position: relative;
+	overflow:hidden;
 	height: 15vw;
 	width: 20vw;
+	z-index: 2;
 }
 .orange {
 	border: 3px solid #f49d57;
@@ -95,10 +101,12 @@ h1 {
 	padding-bottom: 0.8vw;
 	font-family: Caveat;
 	text-align: center;
-	line-height: 100%;
+	position: relative;
+	line-height: 120%;
 	font-size: 3vw;
 	color: #ffffff;
 	height: 20%;
+	z-index: 1;
 }
 .o-top {
 	background: #f49d57;
@@ -114,4 +122,15 @@ h1 {
 }
 .y-top {
 	background: #f2eb0d;
+}
+
+.image-holder {
+	position: relative;
+	height: 75%;
+}
+.image {
+	position: relative;
+	opacity : 0.85;
+	height: 100%;
+	width: 100%;
 }

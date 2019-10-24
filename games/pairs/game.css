@@ -1,0 +1,131 @@
+* {
+	box-sizing:border-box;
+	text-align:center;
+	margin:0;
+}
+
+@font-face {
+	font-family:'Special Elite';
+	src:url(../../assets/fonts/Special_Elite/SpecialElite-Regular.ttf);
+}
+
+.grid-display {
+	display:grid;
+}
+
+
+.four-rows {
+	grid-template-rows:repeat(4, 1fr);
+}
+.five-rows{
+	grid-template-rows:repeat(5, 1fr);
+}
+.board-height-20 {
+	height:90vh;
+	margin-top:5vh;
+}
+.board-height-24 {
+	height:83vh;
+	margin-top:8.5vh;
+}
+.board-height-30 {
+	height:96vh;
+	margin-top:2vh;
+}
+
+
+.five-columns {
+	grid-template-columns:repeat(5, 1fr);
+}
+.six-columns {
+	grid-template-columns:repeat(6, 1fr);
+}
+.board-width-20 {
+	width:83.5vw;
+	margin:auto;
+}
+.board-width-24 {
+	width:90vw;
+	margin:auto;
+}
+.board-width-30 {
+	width:82vw;
+	margin:auto;
+}
+
+
+.card {
+	border-radius:15px;
+	visibility:hidden;
+}
+.card:hover {
+	cursor:pointer;
+}
+
+
+.green-border {
+	background:#ffffff;
+}
+.green-card, .green-border {
+	border:3px solid #35d461;
+}
+.green-card {
+	background-image:linear-gradient(to right, #35d461 , #fff);
+	color:#125425;
+}
+
+
+.card-size-20 {
+	width:16vw;
+	height:21vh;
+	font-size:10vh;
+	line-height:21vh;
+}
+.card-size-24 {
+	width:14.3vw;
+	height:19.2vh;
+	font-size:9vh;
+	line-height:19.2vh;
+}
+.card-size-30 {
+	width:13vw;
+	height:18vh;
+	font-size:8vh;
+	line-height:18vh;
+}
+
+
+.item-display {
+	display:grid;
+	grid-template-rows: 3fr 1fr;
+	justify-items:center;
+	position:relative;
+	overflow:hidden;
+	height:99%;
+	top:1%;
+}
+.picture-frame {
+	position:absolute;
+	height:76%;
+}
+.picture {
+	position:relative;
+}
+.text {
+	font-family:'Special Elite';
+	position:absolute;
+	width:100%;
+	bottom:1px;
+}
+.text-20-cards {
+	font-size:4vh;
+	line-height:4vh;
+}
+.text-24-cards {
+	font-size:3.7vh;
+	line-height:3.7vh;
+}
+.text-30-cards {
+	font-size:3.5vh;
+	line-height:3.5vh;
+}

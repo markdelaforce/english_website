@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+	<title>pairs</title>
+	<meta charset='utf-8'>
+	<link rel='stylesheet' type="text/css" href='options.css'>
+</head>
+
+<body>
+	<div id='background'>
+		<h1>How many cards ?</h1>
+		<div id='buttons'>
+			<div class='option'>
+				<button onclick="startGame(1)">20</button></a>
+				<p class='text'>Easy</p>
+			</div>
+			<div class='option'>
+				<button onclick="startGame(2)">24</button></a>
+				<p class='text'>Medium</p>
+			</div>
+			<div class='option'>
+				<button onclick="startGame(3)">30</button></a>
+				<p class='text'>Difficult</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	function startGame(number) {
+		sessionStorage.setItem("game", number);
+		window.location.href = "game-page.html";
+	}
+</script>
+
+</html>

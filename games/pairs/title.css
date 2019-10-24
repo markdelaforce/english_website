@@ -1,0 +1,59 @@
+* {
+	box-sizing:border-box;
+	text-align:center;
+	margin:0;
+}
+
+@font-face {
+	font-family:'Unkempt';
+	src:url(../../assets/fonts/Unkempt/Unkempt-Regular.ttf);
+}
+@font-face {
+	font-family:'Unkempt Bold';
+	src:url(../../assets/fonts/Unkempt/Unkempt-Bold.ttf);
+}
+@font-face {
+	font-family:'Amatic SC';
+	src:url(../../assets/fonts/Amatic_SC/AmaticSC-Regular.ttf);
+}
+
+#background {
+	background-image:radial-gradient(#fff 1%, #7ef45A 99%);
+	min-height:100vh;
+	width:100vw;
+}
+
+h1, h2 {
+	width:100%;
+	color:#fff;
+}
+h1 {
+	text-shadow:-3px 3px 6px #38b230;
+	font-family:'Unkempt Bold';
+	padding-top:40px;
+	font-size:160px;
+}
+h2 {
+	text-shadow:-2px 2px 4px #48a9a6;
+	font-family:'Unkempt';
+	padding-top:20px;
+	font-size:90px;
+}
+
+#start-button {
+	background-image:radial-gradient(farthest-side at 25% 25%, #fff, #ffff4d);
+	font-family:'Amatic SC';
+	margin-bottom:20px;
+	border-radius:50%;
+	margin-top:75px;
+	font-size:115px;
+	color:#ff8c1a;
+	height:200px;
+	width:200px;
+	border:0;
+}
+#start-button:hover {
+	background-image:radial-gradient(farthest-side at 25% 25%, #fff, #ffff00);
+	font-size:125px;
+	cursor:pointer;
+}
