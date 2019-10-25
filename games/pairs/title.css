@@ -23,6 +23,31 @@
 	width:100vw;
 }
 
+#main-page-btn {
+	box-shadow:2px 2px 4px #554348;
+	font-family:'Unkempt Bold';
+	text-decoration:none;
+	background:#538cc6;
+	border-radius:15px;
+	position:absolute;
+	text-align:center;
+	line-height:60px;
+	font-size:25px;
+	color:#fbf5f3;
+	width:150px;
+	height:60px;
+	border:0;
+	left:3vw;
+	top:5vh;
+}
+
+#main-page-btn:hover {
+	box-shadow:2px 2px 10px #554348;
+	background:#4080bf;
+	line-height:59px;
+	font-size:27px;
+}
+
 h1, h2 {
 	width:100%;
 	color:#fff;
