@@ -7,6 +7,8 @@ card_size_classes     = ['card-size-20',    'card-size-24',    'card-size-30'   
 board_width_classes   = ['board-width-20',  'board-width-24',  'board-width-30' ],
 board_height_classes  = ['board-height-20', 'board-height-24', 'board-height-30'],
 text_classes          = ['text-20-cards',   'text-24-cards',   'text-30-cards'  ],
+arrow_positions		  = ['arrow-20',		'arrow-24',			'arrow-30'],
+repeat_positions	  = ['repeat-20',		'repeat-24',		'repeat-30'],
 
 grid_rows    =     grid_row_classes[game_index],
 grid_columns =  grid_column_classes[game_index],
@@ -15,7 +17,10 @@ board_width  =  board_width_classes[game_index],
 board_height = board_height_classes[game_index],
 text_style   =         text_classes[game_index],
 
-border, colour, text_colour;
+border, colour, text_colour,
+
+arrow = document.getElementById('arrow'),
+repeat = document.getElementById('repeat');
 
 switch (vocab) {
 	
@@ -23,10 +28,19 @@ case 'clothes':
 	border = 'green-border';
 	colour = 'green-card';
 	text_colour = '#16692e';
-	document.body.style.background = '#eafbef';
+	document.body.style.background = '#eafbef';	
+	arrow.setAttribute('src', 'images/green-arrow.png');
+	repeat.setAttribute('src', 'images/green-repeat.png');
 	break;
 	
 }
+
+arrow.classList.add(arrow_positions[game_index]);
+repeat.classList.add(repeat_positions[game_index]);
+
+repeat.addEventListener('click', () => {
+	location.reload();
+});
 
 var columns, rows;
 

@@ -9,6 +9,37 @@
 	src:url(../../assets/fonts/Special_Elite/SpecialElite-Regular.ttf);
 }
 
+#arrow, #repeat {
+	position:absolute;
+	height:3vw;
+	top:4vh;
+}
+
+#repeat:hover {
+	cursor:pointer;
+}
+
+.arrow-20 {
+	left:2.8vw;
+}
+.repeat-20 {
+	right:2.8vw;
+}
+
+.arrow-24 {
+	left:1.1vw;
+}
+.repeat-24 {
+	right:1.1vw;
+}
+
+.arrow-30 {
+	left:3.1vw;
+}
+.repeat-30 {
+	right:3.1vw;
+}
+
 .grid-display {
 	display:grid;
 }
