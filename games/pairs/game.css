@@ -105,6 +105,17 @@
 	color:#125425;
 }
 
+.orange-border {
+	background:#ffffff;
+}
+.orange-card, .orange-border {
+	border:3px solid #f9a61f;
+}
+.orange-card {
+	background-image:linear-gradient(to right, #f9a61f , #fff);
+	color:#955d04;
+}
+
 
 .card-size-20 {
 	width:16vw;

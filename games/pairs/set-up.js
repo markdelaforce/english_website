@@ -1,14 +1,15 @@
 var
+vocab = sessionStorage.vocab,
 game_index = sessionStorage.game -1,
 
-grid_row_classes      = ['four-rows',       'four-rows',       'five-rows'      ],
-grid_column_classes   = ['five-columns',    'six-columns',     'six-columns'    ],
-card_size_classes     = ['card-size-20',    'card-size-24',    'card-size-30'   ],
-board_width_classes   = ['board-width-20',  'board-width-24',  'board-width-30' ],
-board_height_classes  = ['board-height-20', 'board-height-24', 'board-height-30'],
-text_classes          = ['text-20-cards',   'text-24-cards',   'text-30-cards'  ],
-arrow_positions		  = ['arrow-20',		'arrow-24',			'arrow-30'],
-repeat_positions	  = ['repeat-20',		'repeat-24',		'repeat-30'],
+grid_row_classes	 = ['four-rows',		'four-rows',		'five-rows'      ],
+grid_column_classes	 = ['five-columns',		'six-columns',		'six-columns'    ],
+card_size_classes	 = ['card-size-20',		'card-size-24',		'card-size-30'   ],
+board_width_classes  = ['board-width-20',	'board-width-24',	'board-width-30' ],
+board_height_classes = ['board-height-20',	'board-height-24',	'board-height-30'],
+text_classes		 = ['text-20-cards',	'text-24-cards',	'text-30-cards'  ],
+arrow_positions		 = ['arrow-20',			'arrow-24',			'arrow-30'		 ],
+repeat_positions	 = ['repeat-20',		'repeat-24',		'repeat-30'		 ],
 
 grid_rows    =     grid_row_classes[game_index],
 grid_columns =  grid_column_classes[game_index],
@@ -25,14 +26,22 @@ repeat = document.getElementById('repeat');
 switch (vocab) {
 	
 case 'clothes':
-	border = 'green-border';
-	colour = 'green-card';
-	text_colour = '#16692e';
-	document.body.style.background = '#eafbef';	
-	arrow.setAttribute('src', 'images/green-arrow.png');
-	repeat.setAttribute('src', 'images/green-repeat.png');
+	setColours('green', '#16692e', '#eafbef')
 	break;
 	
+case 'body parts':
+	setColours('orange', '#e08c06', '#fef5e6')
+	break;
+	
+}
+
+function setColours(colour_name, hex_code1, hex_code2) {
+	border = colour_name + '-border';
+	colour = colour_name + '-card';
+	text_colour = hex_code1;
+	document.body.style.background = hex_code2;	
+	arrow.setAttribute('src', 'images/' + colour_name + '-arrow.png');
+	repeat.setAttribute('src', 'images/' + colour_name + '-repeat.png');
 }
 
 arrow.classList.add(arrow_positions[game_index]);
