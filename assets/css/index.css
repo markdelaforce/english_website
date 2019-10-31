@@ -3,8 +3,8 @@
 	src: url(../fonts/Caveat/Caveat-Regular.ttf);
 }
 @font-face {
-	font-family: Chewy;
-	src: url(../fonts/Chewy/Chewy-Regular.ttf);
+	font-family: Patrick Hand;
+	src: url(../fonts/Patrick_Hand/PatrickHand-Regular.ttf);
 }
 
 * {
@@ -31,11 +31,12 @@ body {
 }
 
 h1 {
+	font-family: 'Patrick Hand';
 	text-align: center;
-	font-family: Chewy;
-	padding-top: 1.8vw;
-	font-size: 5vw;
+	line-height: 2;
+	font-size: 5.5vw;
 	color: #ff0000;
+	height: 100%;	
 }
 
 #fixed-back {
@@ -50,7 +51,6 @@ h1 {
 
 #contents {
 	margin-left: calc(14.3vw + 3px);
-	position: relative;
 	padding-top: 12vw;
 	width: 71.4vw;
 	
@@ -59,14 +59,20 @@ h1 {
 }
 
 .row {
+	flex-direction: column;
+	position: relative;
+	display: flex;
+	left: -4.5px;
+	width: 72vw;
+}
+
+.anchors, .descriptions {
 	justify-content: space-around;
 	box-sizing: border-box;
-	margin-bottom: 3vh;
 	padding-right: 1vw;
 	padding-left: 1vw;
 	display: flex;
-	width: 100%;
-	left: -3px;
+	width: 100%;	
 }
 
 .orange, .green, .blue, .purple, .yellow {
@@ -133,4 +139,20 @@ h1 {
 	opacity : 0.85;
 	height: 100%;
 	width: 100%;
+}
+
+.description {
+	width: calc(20vw + 6px);	
+	margin-bottom: 5vh;
+	padding-top: 2.5vh;
+	font-size: 1.1vw;
+	line-height: 1.4;
+}
+
+.text {
+	font-family: sans-serif;
+	text-align: justify;
+	color: #4d4d4d;
+	margin: auto;
+	width: 96%;
 }

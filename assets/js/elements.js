@@ -11,6 +11,9 @@ images = [
 ],
 hrefs = [
 	'games/pairs/title-page.html'
+],
+texts = [
+	'Classic card game where each player flips over two cards at a time, trying to find a matching pair.'
 ];
 
 var
@@ -21,7 +24,14 @@ for (let i = 0; i < rows; i++) {
 	
 	var row = document.createElement('div');
 	row.classList.add('row');
+	var anchors = document.createElement('div');
+	anchors.classList.add('anchors');
+	var descriptions = document.createElement('div');
+	descriptions.classList.add('descriptions');
+	
 	contents.appendChild(row);
+	row.appendChild(anchors);
+	row.appendChild(descriptions);
 	
 	for (let j = 0; j < 3; j++) {
 		
@@ -39,23 +49,35 @@ for (let i = 0; i < rows; i++) {
 		var image = document.createElement('img');
 		image.classList.add('image');
 		
+		var description = document.createElement('div');
+		description.classList.add('description');
+		description.classList.add(colors[index][0] + '-description');
+		
+		var text = document.createElement('p');
+		text.classList.add('text');		
+		
 		if (titles[count] != undefined) {
 			anchor.setAttribute('href', hrefs[count]);
 			title.innerHTML = titles[count];
 			image.setAttribute('src', 'assets/images/' + images[count]);
+			text.innerHTML = texts[count];
+			count++;
 		}
-		else
+		else {
 			title.innerHTML = 'activity';
+			text.innerHTML = '... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...';
+		}
 		
-		row.appendChild(anchor);
+		anchors.appendChild(anchor);
 		anchor.appendChild(activity);
 		activity.appendChild(title);
 		activity.appendChild(imageHolder);
 		imageHolder.appendChild(image);
 		
-		count++;
-		index++;
-		if (index === 5)
+		descriptions.appendChild(description);
+		description.appendChild(text);
+		
+		if (++index === 5)
 			index = 0;
 	}
 }
