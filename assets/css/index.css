@@ -15,28 +15,32 @@ a {
 	text-decoration: none;
 }
 
-.side {
-	background-image:
-	linear-gradient(227deg, rgba(255,255,0,.8), rgba(255,255,0,0) 25%),
-	linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 120%),
-	linear-gradient(127deg, rgba(0,0,255,0), rgba(0,0,255,.8) 100%);
-	background-image:
-	url('../images/speckle.png'),
-	linear-gradient(227deg, rgba(255,255,0,.8), rgba(255,255,0,0) 25%),
-	linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 120%),
-	linear-gradient(127deg, rgba(0,0,255,0), rgba(0,0,255,.8) 100%);
+.back, .color, .speckle {
 	position: fixed;
 	height: 100vh;
 	width: 14vw;
+}
+.back {
+	background: #fff;
+	z-index: 3;
+}
+.color {
+	background-image:
+	linear-gradient(227deg, rgba(255,255,0,.8), rgba(255,255,0,0) 25%),
+	linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 120%),
+	linear-gradient(127deg, rgba(0,0,255,0), rgba(0,0,255,.8) 100%);
+	opacity: 0.7;
 	z-index: 4;
 }
-
-#left-side {
+.speckle {
+	background-image: url('../images/speckle.png');
+	z-index: 5;
+}
+#left-back, #left-color, #left-speckle {
 	left:0;
 	top:0;
 }
-
-#right-side {
+#right-back, #right-color, #right-speckle {
 	right:0;
 	top:0;
 }
@@ -47,9 +51,8 @@ a {
 	position: fixed;
 	height: 10vw;
 	width: 72vw;
-	z-index: 3;
+	z-index: 6;
 }
-
 h1 {
 	font-family: 'Patrick Hand';
 	text-align: center;
@@ -79,7 +82,6 @@ h1 {
 	display: flex;
 	width: 72vw;
 }
-
 .anchors, .descriptions {
 	justify-content: space-around;
 	display: flex;
@@ -160,7 +162,6 @@ h1 {
 	font-size: 1.1vw;
 	line-height: 1.4;
 }
-
 .text {
 	font-family: sans-serif;
 	text-align: justify;
